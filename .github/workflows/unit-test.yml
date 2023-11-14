@@ -15,11 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         id: checkout
-      - name: Extract branch name
-        shell: bash
-        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
-        id: extract_branch
-      - name: show branch
-        run: echo ::set-output name=branch::${{ steps.checkout.outputs.ref }}
+      - name: run tests
+        run: python test2.py
       - name: Execute
         run: exit 1
