@@ -2,9 +2,9 @@
 name: Unit Test
 
 on:
-  workflow_call:
   pull_request:
     branches: ["main"]
+  workflow_call:
 
 jobs:
   # Single deploy job since we're just deploying
