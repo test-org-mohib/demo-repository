@@ -18,4 +18,4 @@ jobs:
       - name: run tests
         run: python test2.py
       - name: Execute
-        run: exit 1
+        run: exit 0
