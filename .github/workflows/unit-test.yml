@@ -7,6 +7,8 @@ on:
       target-branch:
         required: true
         type: string
+  pull_request:
+    branches: ["main"]
         
   
 jobs:
