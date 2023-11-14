@@ -3,10 +3,6 @@ name: Unit Test
 
 on:
   workflow_call:
-    inputs:
-      target-branch:
-        required: true
-        type: string
   pull_request:
     branches: ["main"]
         
