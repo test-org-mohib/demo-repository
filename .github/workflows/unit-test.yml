@@ -7,7 +7,7 @@ on:
   workflow_call:
 
 jobs:
-  # Single deploy job since we're just deploying abc
+  # Single deploy job since we're just deploying abcd
   execut_unit_test:
     runs-on: ubuntu-latest
     steps:
