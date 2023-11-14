@@ -2,7 +2,6 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
@@ -21,9 +20,7 @@ concurrency:
 jobs:
 
   unit_test:
-    uses: test-org-mohib/demo-repository/.github/workflows/unit_test.yml@main
-    with:
-      target-branch: 'main'
+    uses: test-org-mohib/demo-repository/.github/workflows/unit-test.yml@main
       
   # Single deploy job since we're just deploying
   deploy:
