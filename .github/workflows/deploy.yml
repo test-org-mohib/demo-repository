@@ -21,7 +21,7 @@ concurrency:
 jobs:
 
   unit_test:
-    uses: test-org-mohib/deme-repository/.github/workflows/unit_test.yml@main
+    uses: test-org-mohib/demo-repository/.github/workflows/unit_test.yml@main
     with:
       target-branch: 'main'
       
