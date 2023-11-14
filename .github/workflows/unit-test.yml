@@ -1,4 +1,4 @@
-# Unit Test reusable workflow a
+# Unit Test reusable workflow ab
 name: Unit Test
 
 on:
@@ -7,13 +7,15 @@ on:
   workflow_call:
 
 jobs:
-
   # Single deploy job since we're just deploying abcdef
 
   execut_unit_test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        id: checkout
+      - name: run tests
+        run: python test2.py
       - name: Execute
-        run: exit 1
+        run: exit 0
