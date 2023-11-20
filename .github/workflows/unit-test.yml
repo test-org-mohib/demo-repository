@@ -50,6 +50,6 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction --no-root
       # - name: run tests
-      #   run: python test2.py a
+      #   run: python test2.py apoetry adsf
       - name: Execute
         run: exit 0
