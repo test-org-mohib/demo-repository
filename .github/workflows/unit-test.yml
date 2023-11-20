@@ -46,7 +46,7 @@ jobs:
       #----------------------------------------------
       # install dependencies if cache does not exist
       #----------------------------------------------
-      - name: show cache
+      - name: show cache output
         run: echo '${{steps.cached-poetry-dependencies.outputs.cache-hit}}'
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
