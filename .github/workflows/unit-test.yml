@@ -51,5 +51,7 @@ jobs:
         run: poetry install --no-interaction --no-root
       # - name: run tests
       #   run: python test2.py apoetry adsf
+      - name:
+        run: poetry run django-admin --version
       - name: Execute
         run: exit 0
