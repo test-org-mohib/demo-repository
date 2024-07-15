@@ -29,7 +29,7 @@ jobs:
         ports:
           # Maps tcp port 5432 on service container to the host
           - 5432:5432
-        
+
     steps:
       #----------------------------------------------
       #       check-out repo and set-up python
@@ -68,8 +68,8 @@ jobs:
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction --no-root
-      # - name: run tests
-      #   run: python test2.py apoetry adsf
+      - name: run tests
+        run: poetry run python manage.py test
       - name:
         run: poetry run django-admin --version
       - name: Execute
